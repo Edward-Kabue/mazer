@@ -1,22 +1,32 @@
-<script setup>
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+<script>
+import { Head } from '@inertiajs/vue3'
+import Layout from '@/Shared/Layout.vue'
+
+export default {
+  components: {
+    Head,
+  },
+  layout: Layout,
+}
 </script>
 
 <template>
-    <Head title="Dashboard" />
-
-    <AuthenticatedLayout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>
-        </template>
-
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">You're logged in!</div>
-                </div>
+    <div>
+      <Head title="Dashboard" />
+      <h1 class="mb-8 text-3xl font-bold">Dashboard</h1>
+      <p class="mb-8 leading-normal">Hey there! Welcome to the crm </p>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div class="p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold text-gray-800">Organizations</h2>
+            <p class="mt-4 text-sm text-gray-600">Manage your organizations here.</p>
+            <a href="/orgs" class="mt-6 text-sm font-semibold text-indigo-600 hover:text-indigo-500">View Organizations</a>
+            </div>
+            <div class="p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold text-gray-800">Users</h2>
+            <p class="mt-4 text-sm text-gray-600">Manage your users here.</p>
+            <a href="/users" class="mt-6 text-sm font-semibold text-indigo-600 hover:text-indigo-500">View Users</a>
             </div>
         </div>
-    </AuthenticatedLayout>
-</template>
+    </div>
+  </template>
+  

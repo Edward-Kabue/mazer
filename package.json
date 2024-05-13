@@ -19,8 +19,10 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
+        "@popperjs/core": "^2.11.8",
         "@vitejs/plugin-vue": "^5.0.4",
         "@vue/server-renderer": "^3.4.27",
+        "loadash": "^1.0.0",
         "vue": "^3.4.27",
         "vue-next": "^0.0.1",
         "vue-router": "^4.0.13"
